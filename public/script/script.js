@@ -33,40 +33,55 @@
     // }
 // }
 
-const resoudreQuadratique = (a, b, c) => {
-  if (a === 0) {
-    return {
-      erreur: "Ce n'est pas une équation du second degré (a ≠ 0 requis)."
-    };
-  }
+// const resoudreQuadratique = (a, b, c) => {
+//   if (a === 0) {
+//     return {
+//       erreur: "Ce n'est pas une équation du second degré (a ≠ 0 requis)."
+//     };
+//   }
 
-  const delta = b ** 2 - 4 * a * c;
+//   const delta = b ** 2 - 4 * a * c;
 
-  if (delta > 0) {
-    const x1 = (-b - Math.sqrt(delta)) / (2 * a);
-    const x2 = (-b + Math.sqrt(delta)) / (2 * a);
+//   if (delta > 0) {
+//     const x1 = (-b - Math.sqrt(delta)) / (2 * a);
+//     const x2 = (-b + Math.sqrt(delta)) / (2 * a);
 
-    return {
-      delta,
-      nombreDeSolutions: 2,
-      solutions: [x1, x2]
-    };
-  }
+//     return {
+//       delta,
+//       nombreDeSolutions: 2,
+//       solutions: [x1, x2]
+//     };
+//   }
 
-  if (delta === 0) {
-    const x = -b / (2 * a);
+//   if (delta === 0) {
+//     const x = -b / (2 * a);
 
-    return {
-      delta,
-      nombreDeSolutions: 1,
-      solutions: [x]
-    };
-  }
+//     return {
+//       delta,
+//       nombreDeSolutions: 1,
+//       solutions: [x]
+//     };
+//   }
 
-  return {
-    delta,
-    nombreDeSolutions: 0,
-    solutions: []
-  };
-};
-console.log(resoudreQuadratique(1, -3, 2));
+//   return {
+//     delta,
+//     nombreDeSolutions: 0,
+//     solutions: []
+//   };
+// };
+// console.log(resoudreQuadratique(1, -3, 2));
+
+const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+const eyeIcon = document.getElementById("eyeIcon");
+const strengthText = document.getElementById("strengthText");
+
+// afficher ou masquer le mot de passe
+togglePassword.addEventListener("click", function(){
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+  passwordInput.setAttribute("type", type);
+  eyeIcon.classList.toggle("fa-eye");
+  eyeIcon.classList.toggle("fa-eye-slash")
+
+})
+
