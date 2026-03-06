@@ -85,3 +85,13 @@ togglePassword.addEventListener("click", function(){
 
 })
 
+const bulb = document.getElementById("bulb")
+const label = document.getElementById("switchLabel");
+// bulb.addEventListener("click", function(){
+//     bulb.classList.toggle("text-warning")
+// })
+const switchLight = document.getElementById("switchLight");
+switchLight.addEventListener("change", ()=>{
+    bulb.classList.toggle("text-warning", switchLight.checked);
+    label.textContent = switchLight.checked ? "Eteindre la lumière" : "Allumer la lumière";
+});

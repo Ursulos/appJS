@@ -8,20 +8,29 @@
     <link rel="stylesheet" href="public/style/all.min.css">
     <link rel="stylesheet" href="public/style/bootstrap.min.css">
     <link rel="stylesheet" href="public/style/style.css">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container mt-4">
-        <div class="alert alert-danger text-center fw-bold fs-5">Système de sécurité</div>
+        <div class="alert alert-danger text-center fw-bold fs-5"><h1 class="gradient-text">Système de sécurité</h1></div>
         <div class="input-group">
             <input type="password" name="" id="password" class="form-control" placeholder="Entrez votre mot de passe">
             <span class="input-group-text" id="togglePassword" style="cursor:pointer;">
                 <i class="fa fa-eye" id="eyeIcon"></i>
             </span>
             <div class="mt-2">
-    <small id="strengthText" class="form-text mt-1"></small>
-    </div>
+                <small id="strengthText" class="form-text mt-1"></small>
+            </div>
+        </div>
+
+        <div class="bulb mt-4">
+            <i id="bulb" class="fa-regular fa-lightbulb" style="font-size: 100px; cursor: pointer;"></i>
+            <div class="form-check form-switch mt-3">
+                <input class="form-check-input" type="checkbox" id="switchLight">
+                <label class="form-check-label" for="switchLight" id="switchLabel" style="font-size: 13px;">Allumer la lumière</label>
+            </div>
+
         </div>
     </div>
 
